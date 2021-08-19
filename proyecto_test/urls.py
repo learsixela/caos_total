@@ -21,6 +21,7 @@ urlpatterns = [
     path('dmix/', include('david_mix.urls')),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
+    path('jorgerojas/', include('jorgerojas.urls')),
     path('ccuevas/', include('cristiancuevas.urls')),  
     path('max_sanchez/',include('Max_Sanchez.urls')),
     path('cvega/', include('constanza_vega.urls')),

@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'cristiancuevas',
     'juan_silva',
     'cliente',
+    'jorgerojas',
     'constanza_vega',
     'jose_ulloa',
     'django.contrib.admin',
