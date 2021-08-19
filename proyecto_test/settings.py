@@ -36,8 +36,10 @@ INSTALLED_APPS = [
     'cristiancuevas',
     'juan_silva',
     'cliente',
+    'jorgerojas',
     'constanza_vega',
     'jose_ulloa',
+    'ariel_gonzalez',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,7 +64,9 @@ ROOT_URLCONF = 'proyecto_test.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'constanza_vega/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
