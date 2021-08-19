@@ -31,4 +31,3 @@ urlpatterns = [
     path('alvaro/', include('alvaro_castillo.urls')),
     path('ipalma/', include('israel_palma.urls')),
 ]
-
