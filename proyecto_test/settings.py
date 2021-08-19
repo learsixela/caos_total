@@ -32,13 +32,22 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Alex_urtubia',
+    'alvaro_castillo',
+    'david_mix',
+    'cristiancuevas',
+    'juan_silva',
     'cliente',
+    'jorgerojas',
+    'constanza_vega',
+    'jose_ulloa',
+    'ariel_gonzalez',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Max_Sanchez',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +65,9 @@ ROOT_URLCONF = 'proyecto_test.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'constanza_vega/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
