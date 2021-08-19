@@ -21,5 +21,13 @@ urlpatterns = [
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
     path('cvega/', include('constanza_vega.urls')),
+<<<<<<< HEAD
     path('ipalma/', include('israel_palma.urls')),
+=======
+<<<<<<< HEAD
+    path('jsilva/', include('juan_silva.urls')),
+=======
+    path('julloa/', include('jose_ulloa.urls')),
+>>>>>>> origin/main
+>>>>>>> c2ef98c5baa6681650451ca353555c4b19079a0a
 ]
