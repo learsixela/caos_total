@@ -18,7 +18,6 @@ from django.urls import include,path
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('dmix/', include('david_mix.urls')),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
     path('jorgerojas/', include('jorgerojas.urls')),
@@ -27,10 +26,7 @@ urlpatterns = [
     path('cvega/', include('constanza_vega.urls')),
     path('jsilva/', include('juan_silva.urls')),
     path('julloa/', include('jose_ulloa.urls')),
-<<<<<<< HEAD
     path('agonzalez/', include('ariel_gonzalez.urls')),
-=======
     path('alvaro/', include('alvaro_castillo.urls')),
->>>>>>> 776e04ed3e4ec48eff2830d533d285432f834c0b
 ]
 
