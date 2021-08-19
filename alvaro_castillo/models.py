@@ -1,5 +1,4 @@
 from django.db import models
-import re
 
 # Create your models here.
 class AlvaroManager(models.Manager): # se define el manager de cliente
@@ -7,21 +6,16 @@ class AlvaroManager(models.Manager): # se define el manager de cliente
         errors = {}
         if len(data['nombre']) == 0:
             errors['nombre'] = 'Ingrese un nombre'
-        if len(data['apellido']) == 0:
-            errors['apellido'] = 'Ingrese un apellido'
-        if len(data['rut']) == 0:
-            errors['rut'] = 'Ingrese rut'
-        EMAIL = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
-        if not EMAIL.match(data['email']):
-            errors['email'] = "email invalido"
+        if len(data['ingredientes']) == 0:
+            errors['ingredientes'] = 'Ingrese descripcion de ingredientes'
+        if len(data['valor']) == 0:
+            errors['valor'] = 'Ingrese valor'
         return errors
 
-class ClienteAlvaro(models.Model):
+class Pizza(models.Model):
     nombre = models.CharField(max_length=50)
-    apellido = models.CharField(max_length=50)
-    rut = models.CharField(max_length=12)
-    email = models.CharField(max_length=200)
-    password = models.CharField(max_length=50)
+    ingredientes = models.CharField(max_length=150)
+    valor = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = AlvaroManager()

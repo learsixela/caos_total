@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'cristiancuevas',
     'juan_silva',
     'cliente',
-    'Erik_Salas',
+    'Erik_Salas', 
     'jorgerojas',
     'constanza_vega',
     'jose_ulloa',
