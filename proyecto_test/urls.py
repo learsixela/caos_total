@@ -20,14 +20,20 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
+    path('max_sanchez/',include('Max_Sanchez.urls')),
     path('cvega/', include('constanza_vega.urls')),
+<<<<<<< HEAD
 <<<<<<< HEAD
     path('ipalma/', include('israel_palma.urls')),
 =======
 <<<<<<< HEAD
-    path('jsilva/', include('juan_silva.urls')),
 =======
+>>>>>>> 60a8151260875593c57b9dde40c3d511fd3f51d8
+    path('jsilva/', include('juan_silva.urls')),
     path('julloa/', include('jose_ulloa.urls')),
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> c2ef98c5baa6681650451ca353555c4b19079a0a
+=======
+>>>>>>> 60a8151260875593c57b9dde40c3d511fd3f51d8
 ]
