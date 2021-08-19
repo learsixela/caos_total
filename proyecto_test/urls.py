@@ -24,6 +24,9 @@ urlpatterns = [
     path('max_sanchez/',include('Max_Sanchez.urls')),
 =======
     path('cvega/', include('constanza_vega.urls')),
+<<<<<<< HEAD
+    path('jsilva/', include('juan_silva.urls')),
+=======
     path('julloa/', include('jose_ulloa.urls')),
 >>>>>>> origin/main
 ]
