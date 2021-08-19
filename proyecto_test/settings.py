@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'andrea_fernandez',
     'ariel_gonzalez',
     'django.contrib.admin',
+    'israel_palma',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
