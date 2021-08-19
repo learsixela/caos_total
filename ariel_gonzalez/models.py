@@ -12,7 +12,7 @@ class Items(models.Model):
     nombre = models.CharField(max_length=40)
     sku = models.CharField(max_length=10)
     unidad = models.CharField(max_length=40)
-    precio = models.floatField(max_length=2)
+    precio = models.FloatField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = ItemManager()

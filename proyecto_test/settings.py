@@ -39,14 +39,8 @@ INSTALLED_APPS = [
     'jorgerojas',
     'constanza_vega',
     'jose_ulloa',
-<<<<<<< HEAD
-<<<<<<< HEAD
     'andrea_fernandez',
-=======
->>>>>>> 280c6e7c72af0c8df8c6681c407e17fae45f4841
-=======
     'ariel_gonzalez',
->>>>>>> bd54cc6799c4e5a423267523a9b23fa8929537dd
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
