@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
     path('cvega/', include('constanza_vega.urls')),
+    path('ipalma/', include('israel_palma.urls')),
 ]
