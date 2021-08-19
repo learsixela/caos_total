@@ -18,7 +18,6 @@ from django.urls import include,path
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('dmix/', include('david_mix.urls')),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
     path('alex_urtubia/', include('alex_urtubia.urls')),
