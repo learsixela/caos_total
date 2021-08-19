@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Alex_urtubia',
     'alvaro_castillo',
     'david_mix',
     'cristiancuevas',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'andrea_fernandez',
     'ariel_gonzalez',
     'django.contrib.admin',
+    'israel_palma',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
