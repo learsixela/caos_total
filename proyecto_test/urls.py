@@ -20,9 +20,15 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
+    path('ccuevas/', include('cristiancuevas.urls')),  
     path('max_sanchez/',include('Max_Sanchez.urls')),
     path('cvega/', include('constanza_vega.urls')),
     path('jsilva/', include('juan_silva.urls')),
     path('julloa/', include('jose_ulloa.urls')),
+<<<<<<< HEAD
     path('e_salas', include('Erik_salas.urls')),
+=======
+    path('alvaro/', include('alvaro_castillo.urls')),
+>>>>>>> ec0b8778bba15c1b79a836edea9a1a6f211909b0
 ]
+
