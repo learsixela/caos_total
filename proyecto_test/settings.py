@@ -31,13 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'alvaro_castillo',
     'david_mix',
     'cristiancuevas',
     'juan_silva',
     'cliente',
     'constanza_vega',
     'jose_ulloa',
+<<<<<<< HEAD
     'andrea_fernandez',
+=======
+>>>>>>> 280c6e7c72af0c8df8c6681c407e17fae45f4841
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,7 +66,9 @@ ROOT_URLCONF = 'proyecto_test.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'constanza_vega/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
