@@ -25,5 +25,6 @@ urlpatterns = [
     path('cvega/', include('constanza_vega.urls')),
     path('jsilva/', include('juan_silva.urls')),
     path('julloa/', include('jose_ulloa.urls')),
+    path('agonzalez/', include('ariel_gonzalez.urls')),
 ]
 

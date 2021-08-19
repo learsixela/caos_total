@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'cliente',
     'constanza_vega',
     'jose_ulloa',
+    'ariel_gonzalez',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
