@@ -25,10 +25,6 @@ urlpatterns = [
     path('cvega/', include('constanza_vega.urls')),
     path('jsilva/', include('juan_silva.urls')),
     path('julloa/', include('jose_ulloa.urls')),
-<<<<<<< HEAD
     path('e_salas', include('Erik_salas.urls')),
-=======
-    path('alvaro/', include('alvaro_castillo.urls')),
->>>>>>> ec0b8778bba15c1b79a836edea9a1a6f211909b0
 ]
 
