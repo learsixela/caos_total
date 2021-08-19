@@ -20,6 +20,7 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
+    path('ccuevas/', include('cristiancuevas.urls')),  
     path('max_sanchez/',include('Max_Sanchez.urls')),
     path('cvega/', include('constanza_vega.urls')),
 <<<<<<< HEAD
@@ -37,3 +38,4 @@ urlpatterns = [
 =======
 >>>>>>> 60a8151260875593c57b9dde40c3d511fd3f51d8
 ]
+
