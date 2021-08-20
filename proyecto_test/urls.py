@@ -20,6 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
+    path('karina_aliste/', include('karina_aliste.urls')),
+    path('dmix/', include('david_mix.urls')),
     path('alex_urtubia/', include('Alex_urtubia.urls')),
     path('jorgerojas/', include('jorgerojas.urls')),
     path('ccuevas/', include('cristiancuevas.urls')),  
@@ -27,10 +29,10 @@ urlpatterns = [
     path('cvega/', include('constanza_vega.urls')),
     path('jsilva/', include('juan_silva.urls')),
     path('julloa/', include('jose_ulloa.urls')),
-    path('e_salas', include('Erik_Salas.urls')),
+    path('e_salas/', include('Erik_Salas.urls')),
     path('agonzalez/', include('ariel_gonzalez.urls')),
     path('alvaro/', include('alvaro_castillo.urls')),
     path('rcarmona/', include('roberto_carmona.urls')),
     path('ipalma/', include('israel_palma.urls')),
+    path('srojas/', include('sebastian_rojas.urls')),
 ]
-
