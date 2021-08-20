@@ -4,5 +4,5 @@ from . import views
 urlpatterns = [
     # CRUD
     # acceso por defecto
-    path('', views.inicio),
+    path('', views.index),
 ]
