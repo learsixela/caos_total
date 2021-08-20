@@ -16,6 +16,7 @@
         arreglo[3]= "errorUsuario";
         arreglo[4]= "errorPassword";
         arreglo[5]= "errorConfirmacion";
+        arreglo[6]= "errorRut";
 
         function validar(){
             var entrada= new Array();
@@ -25,6 +26,7 @@
             entrada[3]= document.getElementById('user').value;
             entrada[4]= document.getElementById('password').value;
             entrada[5]= document.getElementById('confirmarpassword').value;
+            entrada[6]= document.getElementById('confirmarrut').value;
 
             var error = new Array();
             error[0] = "<span style='color:red'>Ingrese el Nombre!</span>";
@@ -33,6 +35,7 @@
             error[3] = "<span style='color:red'>Ingrese el Nombre de usuario!</span>";
             error[4] = "<span style='color:red'>Ingrese el Password!</span>";
             error[5] = "<span style='color:red'>Ingrese la confirmación del Password</span>";
+            error[6] = "<span style='color:red'>Ingrese el RUT!</span>";
         
             for (i in entrada){
                 var mensajeError= error[i];
@@ -74,13 +77,13 @@
         }
         function validarTodos(){
             var contador=0;
-            for (i=0; i<6;i++){
+            for (i=0; i<7;i++){
                 var valorArreglo=arreglo[i];
                 if(document.getElementById(valorArreglo).innerHTML== "Campo válido"){
                     contador++;
                 }
             }
-            if (contador==6){
+            if (contador==7){
                 document.getElementById("mensajefinal").innerHTML = "Formulario validado!";
             }
         }
@@ -89,7 +92,8 @@
 </head>
 <body>
     <br><br>
-    <form action="#" method="POST">
+    <form action="agregar" method="POST">
+        {% csrf_token %}
         <div class="container">
             <div class="row text-center justify-content-md-center mb-3">
                 <h2>Validando el formulario</h2>
@@ -112,6 +116,16 @@
                     <input class="form-control" type="text" id="apellido" name="apellido" onkeyup="validar()">
                 </div>
                 <div class="col col-lg-2" id="errorApellido">
+                </div>
+            </div>
+            <div class="row text-center justify-content-md-center mb-3">
+                <div class="col col-lg-1">
+                    Rut:
+                </div>
+                <div class="col col-lg-2">
+                    <input class="form-control" type="text" id="rut" name="rut" onkeyup="validar()">
+                </div>
+                <div class="col col-lg-2" id="errorRut">
                 </div>
             </div>
             <div class="row text-center justify-content-md-center mb-3">
