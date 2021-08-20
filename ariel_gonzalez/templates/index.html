@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block form %}
+    <h1>Página Inicial</h1>
+    <h3>Creando un Usuario</h3>
+    <form action='/users' method='post'>
+    {% csrf_token %}
+        <div class="form-group">
+            Name: <input type='text' name='name'>
+            Email: <input type='text' name='email'>
+        </div>
+        <div class="form-group">
+            <button type='submit'>Crear Usuario</button>
+        </div>
+    </form>
+{% endblock form %}
+{% block info %}
+    <h1>{{name}}</h1>
+    <h1>{{email}}</h1>
+{% endblock info %}
+
