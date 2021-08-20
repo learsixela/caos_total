@@ -2,5 +2,8 @@ from django.shortcuts import render,HttpResponse,render
 
 # Create your views here.
 def index(request):
-	return HttpResponse("this is the equivalent of @app.route('ariel_gonzalez/')!")
+	return render(request, 'index1.html')
+
+def item_info(request):
+	return render(request,'info.html')
 
