@@ -18,19 +18,17 @@ from django.urls import include,path
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('dmix/', include('david_mix.urls')),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
+    path('alex_urtubia/', include('Alex_urtubia.urls')),
     path('jorgerojas/', include('jorgerojas.urls')),
     path('ccuevas/', include('cristiancuevas.urls')),  
     path('max_sanchez/',include('Max_Sanchez.urls')),
     path('cvega/', include('constanza_vega.urls')),
     path('jsilva/', include('juan_silva.urls')),
     path('julloa/', include('jose_ulloa.urls')),
-<<<<<<< HEAD
+    path('e_salas', include('Erik_Salas.urls')),
     path('agonzalez/', include('ariel_gonzalez.urls')),
-=======
     path('alvaro/', include('alvaro_castillo.urls')),
->>>>>>> 776e04ed3e4ec48eff2830d533d285432f834c0b
+    path('ipalma/', include('israel_palma.urls')),
 ]
-

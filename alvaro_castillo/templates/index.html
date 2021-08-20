@@ -6,26 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">   
-    <title>index cliente</title>
+    <title>index Pizzas</title>
 </head>
 <body>
-    <h1>Ingrese sus datos</h1>
+    <h1>Ingrese la pizza</h1>
     <form method="POST" action="agregar">
         {% csrf_token %}
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" placeholder="nombre">
         <br>
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" placeholder="apellido">
+        <label for="ingredientes">Ingredientes:</label>
+        <input type="text" id="ingredientes" name="ingredientes placeholder="ingredientes">
         <br>
-        <label for="rut">Rut:</label>
-        <input type="text" id="rut" name="rut" placeholder="rut">
-        <br>
-        <label for="email">Correo:</label>
-        <input type="text" id="email" name="email" placeholder="email">
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="password">
+        <label for="valor">valor:</label>
+        <input type="valor" id="valor" name="valor" placeholder="valor">
         <br>
         <input type="submit" value="Enviar">
     </form>
