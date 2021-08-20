@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block info %}
+{% csrf_token %}
+    <h1>Lista de Items Creados</h1>
+    <br>
+    <br>
+    {% for item in list_items %}
+        <ul>{{item.nombre}}</ul>
+        <li>{{item.unidad}}</li>
+        <li>{{item.sku}}</li>
+        <br>
+        <hr>
+    {% endfor %}
+    <a href="{% url 'index' %}">Volver</a>
+    <br>
+
+{% endblock info %}

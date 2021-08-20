@@ -4,5 +4,9 @@ from . import views
 urlpatterns = [
     # CRUD
     # acceso por defecto
-    path('', views.inicio_isra),
+    path('', views.inicio),
+    path('create', views.create),
+    path('read', views.read),
+    path('update', views.update),
+    path('delete', views.delete),
 ]
