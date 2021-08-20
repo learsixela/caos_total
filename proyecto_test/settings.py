@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Max_Sanchez',
     'sebastian_rojas',
+    'roberto_carmona',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             'constanza_vega/templates',
+            'juan_silva/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {

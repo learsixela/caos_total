@@ -99,7 +99,7 @@
                     Nombre:
                 </div>
                 <div class="col col-lg-2">
-                    <input class="form-control" type="text" id="nombre" onkeyup="validar()">
+                    <input class="form-control" type="text" id="nombre" name="nombre" onkeyup="validar()">
                 </div>
                 <div class="col col-lg-2" id="errorNombre">
                 </div>
@@ -109,7 +109,7 @@
                     Apellido:
                 </div>
                 <div class="col col-lg-2">
-                    <input class="form-control" type="text" id="apellido" onkeyup="validar()">
+                    <input class="form-control" type="text" id="apellido" name="apellido" onkeyup="validar()">
                 </div>
                 <div class="col col-lg-2" id="errorApellido">
                 </div>
@@ -119,7 +119,7 @@
                     E-mail:
                 </div>
                 <div class="col col-lg-2">
-                    <input class="form-control" type="text" id="email" onkeyup="validar()">
+                    <input class="form-control" type="text" id="email" name="email" onkeyup="validar()">
                 </div>
                 <div class="col col-lg-2" id="errorEmail">
                 </div>
@@ -129,7 +129,7 @@
                     Username:
                 </div>
                 <div class="col col-lg-2">
-                    <input class="form-control" type="text" id="user" onkeyup="validar()">
+                    <input class="form-control" type="text" id="user" name="user" onkeyup="validar()">
                 </div>
                 <div class="col col-lg-2" id="errorUsuario"></div>
             </div>
@@ -138,7 +138,7 @@
                     Password:
                 </div>
                 <div class="col col-lg-2">
-                    <input class="form-control" type="text" id="password" onkeyup="validar()">
+                    <input class="form-control" type="text" id="password" name="password" onkeyup="validar()">
                 </div>
                 <div class="col col-lg-2" id="errorPassword"></div>
             </div>
@@ -157,7 +157,7 @@
                 </div>
                 <div class="col col-lg-2 d-inline-block" >
                     <input class="btn btn-warning" type="reset" value="Limpiar">
-                    <input type="Button" class="btn btn-success" onclick="validar(); validarTodos();" value="Validar"> 
+                    <input type="submit" value="Enviar" class="btn btn-success" onclick="validar(); validarTodos();" > 
                 </div>
                 <div class="col col-lg-2"></div>
             </div>
