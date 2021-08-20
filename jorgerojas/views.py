@@ -1,5 +1,5 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render
 
-# Create your views here.
 def inicio(request):
-    return HttpResponse("Esta es la aplicacion de JRojas XD")
+    #return HttpResponse("this is the equivalent of @app.route('/')!")
+    return render(request, 'showme.html')
