@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'karina_aliste',
     'Alex_urtubia',
     'alvaro_castillo',
     'david_mix',
@@ -77,6 +78,7 @@ TEMPLATES = [
             'juan_silva/templates',
             'ariel_gonzalez/templates',
             'jose_ulloa/templates',
+            'jorgerojas/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
