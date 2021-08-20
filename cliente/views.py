@@ -19,13 +19,13 @@ def agregar(request):
     password = request.POST['password'],
     direccion = request.POST['direccion']
     )
-    return render(request, "index.html")
+    return render(request, "cliente/index.html")
 
 def leer(request):
     # el tipo de variable es definida por el contenido
     # select * from cliente 
     clientes = Cliente.objects.all()
-    return render(request, "index.html")
+    return render(request, "cliente/index.html")
 
 # render pendiente***
 def actualizar(request):
