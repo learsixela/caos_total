@@ -1,3 +1,35 @@
 h1{
     color: #131C21
 }
+
+form{
+    width: 200px;
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 0 20px 0 20px;
+    background: rgb(180,176,255);
+    background: linear-gradient(90deg, rgba(180,176,255,1) 0%, rgba(211,211,242,1) 38%, rgba(223,230,231,1) 100%); 
+}
+
+.lbl1{
+    font-weight: bold;
+}
+
+.txt1{
+    margin: 10px 0 20px 0;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px 0;
+}
+
+.btn1{
+    margin-left: 55px;
+    border-radius: 15px 0 15px 0;
+    color: #f7f7f7;
+    background-color: #014463;
+    box-shadow: 0 2px 3px 0 #000000;
+}
+
+.btn1:hover{
+    background-color: #01699A
+}

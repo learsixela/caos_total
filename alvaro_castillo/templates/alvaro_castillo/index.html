@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">   
+    <title>index Pizzas</title>
+</head>
+<body>
+    <h1>Ingrese su pizza</h1>
+    <form method="POST" action="agregar">
+        {% csrf_token %}
+        <label class="lbl1" for="nombre">Nombre:</label>
+        <br>
+        <input class="txt1" type="text" id="nombre" name="nombre" placeholder="nombre">
+        <br>
+        <label class="lbl1" for="ingredientes">Ingredientes:</label>
+        <br>
+        <input class="txt1" type="text" id="ingredientes" name="ingredientes" placeholder="ingredientes">
+        <br>
+        <label class="lbl1" for="valor">valor:</label>
+        <br>
+        <input class="txt1" type="valor" id="valor" name="valor" placeholder="valor">
+        <br>
+        <input class="btn1" type="submit" value="Enviar">
+    </form>
+</body>
+</html>
