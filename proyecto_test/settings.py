@@ -73,6 +73,7 @@ TEMPLATES = [
         'DIRS': [
             'constanza_vega/templates',
             'juan_silva/templates',
+            'ariel_gonzalez/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
