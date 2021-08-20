@@ -71,6 +71,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             'constanza_vega/templates',
+            'roberto_carmona/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
