@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'cristiancuevas',
     'juan_silva',
     'cliente',
+    'Erik_Salas', 
     'jorgerojas',
     'constanza_vega',
     'jose_ulloa',
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Max_Sanchez',
+    'roberto_carmona',
 ]
 
 MIDDLEWARE = [
