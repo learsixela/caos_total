@@ -16,3 +16,9 @@ def agregar(request):
     )
 
     return render(request,"juan_silva/index.html")
+
+def read(request):
+    return render(request,"juan_silva/index.html")
+
+def update(request):
+    return render(request,"juan_silva/index.html")

@@ -7,13 +7,13 @@ from django.contrib import messages
 #cambiar los nombres de los index para que funcione en diferentes app
 
 def index(request):
-	return render(request, 'index1.html')
+	return render(request, 'ariel_gonzalez/index.html')
 
 #Aqui se leerá la lista de todos los items que existen en la Base de datos
 def item_list(request):
 	list_items=Item.objects.all()
 	context={'list_items':list_items}
-	return render(request,"info.html",context)
+	return render(request,"ariel_gonzalez/info.html",context)
 	#return HttpResponse("Esta es la ruta para mostrar todos los items")
 
 #Muestra la información del Item con sku=sku
