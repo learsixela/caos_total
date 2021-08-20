@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Max_Sanchez',
+    'sebastian_rojas',
     'roberto_carmona',
 ]
 
@@ -72,7 +73,9 @@ TEMPLATES = [
         'DIRS': [
             'constanza_vega/templates',
             'Max_Sanchez/templates',
+            'david_mix/templates',
             'juan_silva/templates',
+            'ariel_gonzalez/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
