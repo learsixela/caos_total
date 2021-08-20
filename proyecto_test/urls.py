@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include,path
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
     path('alex_urtubia/', include('Alex_urtubia.urls')),

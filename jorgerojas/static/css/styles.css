@@ -1,0 +1,19 @@
+#normal {
+    width: 400px;
+    height: 470px;
+    border: 5px solid black;
+    margin: 10;
+    background-color: bisque;
+}
+
+h1 {    
+    font-family: Arial;
+    font-size: x-large;
+    color: blueviolet;
+}
+
+label, input, button {  
+    font-family: Arial;
+    font-size : large;
+    color :green;
+}
