@@ -5,10 +5,11 @@ import re
 # Create your models here.
 class ItemManager(models.Manager):
     def validate(self, user_data):
-        pass
+        errores={}
+        return errores
 
 
-class Items(models.Model):
+class Item(models.Model):
     nombre = models.CharField(max_length=40)
     sku = models.CharField(max_length=10)
     unidad = models.CharField(max_length=40)
