@@ -7,7 +7,6 @@ def inicio(request):
 
 
 def agregar(request):
-    #request.post['parametro']
     Cliente_jsilva.objects.create(
     nombre = request.POST['nombre'],
     apellido = request.POST['apellido'],
