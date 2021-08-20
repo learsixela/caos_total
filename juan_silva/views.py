@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Cliente
+
+
 def inicio(request):
     return render(request,"index.html")
 
