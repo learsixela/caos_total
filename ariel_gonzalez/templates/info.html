@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block info %}
+    <h1>Datos enviados en Formulario</h1>
+    <br>
+    <a href="{% url 'home' %}">Página Inicial</a>
+    <br>
+    <br>
+    <h6>Nombre: {{name}}</h6>
+    <h6>Email:  {{email}}</h6>
+
+{% endblock info %}

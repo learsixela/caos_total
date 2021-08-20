@@ -31,22 +31,27 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Alex_urtubia',
     'alvaro_castillo',
     'david_mix',
     'cristiancuevas',
     'juan_silva',
     'cliente',
+    'Erik_Salas', 
     'jorgerojas',
     'constanza_vega',
     'jose_ulloa',
+    'andrea_fernandez',
     'ariel_gonzalez',
     'django.contrib.admin',
+    'israel_palma',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Max_Sanchez',
+    'roberto_carmona',
 ]
 
 MIDDLEWARE = [
