@@ -1,8 +1,7 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    # CRUD
-    # acceso por defecto
-    path('', views.index),
-]
+    path('', views.inicio),
+    path('inicio', views.inicio),
+    ]
