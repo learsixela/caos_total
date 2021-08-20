@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ClienteAlvaro
+from .models import Pizza
 
 
 # Create your views here.
@@ -7,11 +7,9 @@ def index(request):
     return render(request, "index.html")
 
 def add(request):
-    ClienteAlvaro.objects.create(
+    Pizza.objects.create(
     nombre = request.POST['nombre'],
-    apellido = request.POST['apellido'],
-    rut = request.POST['rut'],
-    email = request.POST['email'],
-    password = request.POST['password']
+    ingredientes = request.POST['ingredientes'],
+    valor = request.POST['valor'],
     )
     return render(request,"index.html")
