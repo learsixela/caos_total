@@ -10,9 +10,9 @@
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+    <div class="container my-5">
         <h2 class="text-center">{{ pic.title }}</h2>
-        <img class="mx-auto d-block" style="width: 500px;" src="{{ pic.url }}" alt="{{ pic.explanation }}">
+        <img class="mx-auto py-5 d-block" style="width: 500px;" src="{{ pic.url }}" alt="{{ pic.explanation }}">
 
         <div class="container">
             <p class="fw-bold">Descripción: </p>
@@ -21,7 +21,9 @@
 
         <div class="container">
             <p><span class="fw-bold">Fecha: </span>{{ pic.date }}</p>
-            <p><span class="fw-bold">Derechos de autor: </span>{{ pic.copyright }}</p>
+            {% if pic.copyright %}
+                <p><span class="fw-bold">Derechos de autor: </span>{{ pic.copyright }}</p>
+            {% endif %}
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
