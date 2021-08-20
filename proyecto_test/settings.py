@@ -75,6 +75,7 @@ TEMPLATES = [
             'roberto_carmona/templates',
             'david_mix/templates',
             'juan_silva/templates',
+            'ariel_gonzalez/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
