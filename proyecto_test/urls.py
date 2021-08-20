@@ -20,7 +20,7 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
-    path('karina_aliste/', include('karina_aliste')),
+    path('karina_aliste/', include('karina_aliste.urls')),
     path('alex_urtubia/', include('Alex_urtubia.urls')),
     path('jorgerojas/', include('jorgerojas.urls')),
     #path('ccuevas/', include('cristiancuevas.urls')),  
