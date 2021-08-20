@@ -27,7 +27,7 @@ urlpatterns = [
     path('cvega/', include('constanza_vega.urls')),
     path('jsilva/', include('juan_silva.urls')),
     path('julloa/', include('jose_ulloa.urls')),
-    path('e_salas', include('Erik_Salas.urls')),
+    path('e_salas/', include('Erik_Salas.urls')),
     path('agonzalez/', include('ariel_gonzalez.urls')),
     path('alvaro/', include('alvaro_castillo.urls')),
     path('rcarmona/', include('roberto_carmona.urls')),
