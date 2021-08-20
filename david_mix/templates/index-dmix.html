@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>Aplicación de David Mix</title>
 </head>
 <body>
-    <h1>Proyecto de David Mix</h1>
+    <h1>Aplicación de David Mix</h1>
+    <hr />
+    <table>
+        <tr id="heading">
+            <th>Referencia Geográfica</th>
+            <th>Magnitud</th>
+            <th>Fecha</th>
+            <th>Latitud</th>
+            <th>Longitud</th>
+        </tr>
+    </table>
+    <script>
+        $('document').ready(function(){
+            $.get("https://api.gael.cloud/general/public/sismos", function(res){
+                console.log(res[0])
+                var tableBody = ""
+                for(i = 0; i<res.length; i++){
+                    tableBody += 
+                    "<tr>"+
+                    "<td>"+res[i].RefGeografica+"</td>"+
+                    "<td>"+res[i].Magnitud+"</td>"+
+                    "<td>"+res[i].Fecha+"</td>"+
+                    "<td>"+res[i].Latitud+"</td>"+
+                    "<td>"+res[i].Longitud+"</td>"+
+                    "</tr>"
+                }
+                $('table').append(tableBody)
+            },'json');
+            return false;
+        })
+    </script>
 </body>
 </html>

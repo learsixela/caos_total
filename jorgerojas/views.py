@@ -5,6 +5,4 @@ def index(request):
     return HttpResponse("Esta es la aplicacion de JRojas XD")
 
 def inicio(request):
-    #return HttpResponse("this is the equivalent of @app.route('/')!")
-    return render(request, 'showme.html')
-
+    return render(request, 'inicio_jrm.html')
