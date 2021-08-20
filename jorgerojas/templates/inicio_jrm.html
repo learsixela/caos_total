@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+
+    <title>Inicio Jorge Rojas ::</title>
+</head>
+
+<body>
+
+    <div align="center">
+        <div id="normal">
+            <h1>** Mi App - Jorge Rojas **</h1>
+            <hr>
+            <form method="POST" action="agregar">
+                {% csrf_token %}
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <hr>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                <hr>
+                <label for="rut">Rut:</label>
+                <input type="text" id="rut" name="rut" placeholder="Rut">
+                <hr>
+                <label for="dv">Dv:</label>
+                <input type="text" id="dv" name="dv" placeholder="Dv">
+                <hr>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Email">
+                <hr>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <hr>
+                <label for="direccion">Direccion:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Direccion">
+                <hr>
+                <button class="btn">Agregar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

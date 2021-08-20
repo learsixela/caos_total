@@ -3,7 +3,7 @@ from .models import Cliente_jsilva
 
 
 def inicio(request):
-    return render(request,"index.html")
+    return render(request,"juan_silva/index.html")
 
 
 def agregar(request):
@@ -15,4 +15,4 @@ def agregar(request):
     password = request.POST['password']
     )
 
-    return render(request,"index.html")
+    return render(request,"juan_silva/index.html")

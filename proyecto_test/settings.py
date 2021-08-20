@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'karina_aliste',
     'Alex_urtubia',
     'alvaro_castillo',
     'david_mix',
@@ -72,9 +73,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             'constanza_vega/templates',
-            'david_mix/templates',
-            'juan_silva/templates',
-            'ariel_gonzalez/templates',
+            'jorgerojas/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {

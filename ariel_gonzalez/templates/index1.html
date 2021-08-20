@@ -2,16 +2,32 @@
 
 
 {% block form %}
-    <h1>Página Inicial</h1>
-    <h3>Creando un Usuario</h3>
-    <form action='/items' method='post'>
+    <h1>Página Principal para App (Items)</h1>
+    <br>
+    <br>
+    <hr>
+    <h3>Crear Items para Bodega</h3>
+    <br>
+    <br>
+    <form action='items/create' method='post'>
     {% csrf_token %}
         <div class="form-group">
-            Name: <input type='text' name='name'>
-            Email: <input type='text' name='email'>
+            <label for="name" class="col-sm-2 control-label">Nombre:</label>
+            <input type='text' name='name'>
+            <br>
+            <label for="sku" class="col-sm-2 control-label">SKU:</label>
+            <input type='text' name='sku'>
+            <br>
+            <label for="unidad" class="col-sm-2 control-label">Unidad de Medida:</label>
+            <input type='text' name='unidad'>
+            <br>
+            <label for="precio" class="col-sm-2 control-label">Precio:</label>
+            <input type='text' name='precio'>
+            <br>
         </div>
         <div class="form-group">
-            <button type='submit'>Crear Usuario</button>
+            <button type='submit'>Crear Item</button>
+            <button type='button'>Limpiar</button>
         </div>
     </form>
 {% endblock form %}
