@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 
 
-def index(request):
-    return render(request, 'indexcc.html')
+def inicio(request):
+    return render(request, 'index.html')
+

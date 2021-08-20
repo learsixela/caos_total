@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class ServicioManager(models.Manager):
-    def vaidaciones(self, data):
+    def validaciones(self, data):
         errores = {}
         if len(data['servicio']) == 0:
             errores['servicio'] = 'Ingrese un servicio'
