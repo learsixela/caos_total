@@ -16,7 +16,8 @@ def agregar(request):
 	apellido=request.POST['apellido'],
 	email=request.POST['email'],
 	password=request.POST['password'],
-	return render(request, "index.html"))
+	)
+	return render(request, "index.html")
 
 def leer(request):
 	registros=Registro.objects.all()
