@@ -13,10 +13,10 @@
     {% csrf_token %}
         <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Nombre:</label>
-            <input type='text' name='name'>
+            <input type='text' name='nombre' placeholder='Nombre'>
             <br>
             <label for="sku" class="col-sm-2 control-label">SKU:</label>
-            <input type='text' name='sku'>
+            <input type='text' name='sku' placeholder='SKU'>
             <br>
             <label for="unidad" class="col-sm-2 control-label">Unidad de Medida:</label>
             <input type='text' name='unidad'>
@@ -32,7 +32,27 @@
     </form>
 {% endblock form %}
 {% block info %}
-    <h1>{{name}}</h1>
-    <h1>{{email}}</h1>
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">sku</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">unidad</th>
+                    <th scope="col">precio</th>
+                    <th scope="col">acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in list_items %}
+                <tr>
+                    <th scope="row"></th>
+                    <td>{{item.sku}}</td>
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.unidad}}</td>
+                    <td>{{item.precio}}</td>
+                    <td><a href="">Eliminar</a><a href="">Editar</a></td>
+                </tr>
+                {% endfor %}
 {% endblock info %}
 
