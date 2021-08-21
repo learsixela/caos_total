@@ -7,12 +7,18 @@ from django.contrib import messages
 #cambiar los nombres de los index para que funcione en diferentes app
 
 def index(request):
-	return render(request, 'ariel_gonzalez/index.html')
+	list_items=Item.objects.all()
+	context={
+		'list_items':list_items
+	}
+	return render(request, 'ariel_gonzalez/index.html',context)
 
 #Aqui se leerá la lista de todos los items que existen en la Base de datos
 def item_list(request):
 	list_items=Item.objects.all()
-	context={'list_items':list_items}
+	context={
+		'list_items':list_items
+	}
 	return render(request,"ariel_gonzalez/info.html",context)
 	#return HttpResponse("Esta es la ruta para mostrar todos los items")
 
@@ -45,14 +51,14 @@ def item_create(request):
 	errors = Item.objects.validate(request.POST)
 	if len(errors) > 0:
 		#Tratamiento de errores
-		return redirect('/agonzalez')
+		return redirect('/agonzalez/')
 	else:
 		item = Item.objects.create(
-				nombre=request.POST['name'],
+				nombre=request.POST['nombre'],
 				sku=request.POST['sku'],
 				precio=request.POST['precio'],
 				unidad=request.POST['unidad'],
 			)
 		messages.success(request,"Item Creado Satisfactoriamente")
-		return redirect('/agonzalez')
+		return redirect('/agonzalez/')
 		#return HttpResponse("Esta es la ruta para crear items")
