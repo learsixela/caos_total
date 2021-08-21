@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class ProductoManager(models.Manager):
+class ElementoManager(models.Manager):
     def validador_producto(self, data):
         errores = {}
         if len(data['id']) == 0:
@@ -15,11 +15,10 @@ class ProductoManager(models.Manager):
         if len(data['peso']) == 0:
             errores['peso'] = 'Ingrese peso'
 
-class Producto(models.Model):
-    def __init__(self, nombre, descripcion, precio, peso):
-        self.id = models.AutoField(auto_created=True, primary_key=True)
-        self.nombre = models.CharField(max_length=50)
-        self.descripcion = models.CharField(max_length=200)
-        self.precio = models.CharField(max_length=50)
-        self.peso = models.IntegerField()
-        objects = ProductoManager()
+class Elemento(models.Model):
+    id = models.AutoField(auto_created=True, primary_key=True)
+    nombre = models.CharField(max_length=50)
+    descripcion = models.CharField(max_length=200)
+    precio = models.CharField(max_length=50)
+    peso = models.IntegerField()
+    objects = ElementoManager()

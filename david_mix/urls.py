@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.start, name='dmix'),
-    
+    path('productos', views.productos, name='dmixStore'),
+    path('register', views.register),
 ]
