@@ -1,21 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'israel_palma/base.html' %}
+{% block form %}
+    {% include 'israel_palma/navbar.html' %}
+    <div class="container">
+        <form class="text-center my-5" method="POST" action="create">
+        {% csrf_token %}
+            <div class="mb-3">
+                <label for="servicio" class="form-label">Servicio:</label>
+                <input type="text" class="form-control" id="servicio" name="servicio" placeholder="Ingrese Servicio">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción:</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese Descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="tiempo" class="form-label">Tiempo:</label>
+                <input type="text" class="form-control" id="tiempo" name="tiempo" placeholder="Ingrese tiempo">
+            </div>
+            <div class="mb-3">
+                <label for="costo" class="form-label">Costo:</label>
+                <input type="text" class="form-control" id="costo" name="costo" placeholder="Ingrese Costo">
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-success" value="Enviar datos">
+            </div>
+        </form>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba Caos Total::</title>
-</head>
-
-<body>
-    <h1>Prueba Caos Total</h1>
-    <form action="index.php" method="post">
-        <input type="text" name="nombre" placeholder="Nombre">
-        <input type="text" name="apellido" placeholder="Apellido">
-        <input type="text" name="email" placeholder="Email">
-        <input type="submit" value="Enviar datos">
-    </form>
-</body>
-
-</html>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">servicio</th>
+                    <th scope="col">descripcion</th>
+                    <th scope="col">tiempo</th>
+                    <th scope="col">costo</th>
+                    <th scope="col">acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ser in servicios %}
+                <tr>
+                    <th scope="row"></th>
+                    <td>{{ser.servicio}}</td>
+                    <td>{{ser.descripcion}}</td>
+                    <td>{{ser.tiempo}}</td>
+                    <td>{{ser.costo}}</td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+    <div>
+{% endblock form %}

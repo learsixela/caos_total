@@ -1,11 +1,21 @@
 from django.shortcuts import render, HttpResponse,redirect
-
+from .models import Servicio
 # Create your views here.
 def inicio(request):
-    return redirect(request,'israel_palma/index.html')
+    servicios = Servicio.objects.all()
+    context = {
+        "servicios":servicios,
+    }
+    return render(request,'israel_palma/index.html', context)
 
 def create(request):
-    return HttpResponse("create")
+    Servicio.objects.create(
+    servicio = request.POST['servicio'],
+    descripcion = request.POST['descripcion'],
+    tiempo = request.POST['tiempo'],
+    costo = request.POST['costo']
+    )
+    return redirect('/ipalma/')
 
 def read(request):
     return HttpResponse("read")
