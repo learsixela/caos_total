@@ -5,7 +5,7 @@ from .models import Cliente
 def inicio(request):
     #return HttpResponse("this is the equivalent of @app.route('/')!")
     #return render(request, "cliente/index.html")
-    return redirect(request,'cliente/index.html')
+    return render(request,'cliente/index.html')
 
 def agregar(request):
     # request.post['parametro']
