@@ -48,7 +48,7 @@
                         <form action="delete" method="POST">
                             {% csrf_token %}
                             <input type="hidden" name="id" value="{{ser.id}}">
-                            <button type="button" class="btn btn-sm btn-outline-danger">Eliminar</button>
+                            <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
                         </form>
                     </td>
                 </tr>

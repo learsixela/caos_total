@@ -24,9 +24,7 @@ def update(request):
     return HttpResponse("update")
 
 def delete(request):
-    servicio = Servicio.objects.get(id=request.POST['id'])
-    print(servicio)
-    servicio.delete()
+    servicio = Servicio.objects.get(id=request.POST['id']).delete()
     return redirect('/ipalma/')
 
 
