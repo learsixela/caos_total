@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse,redirect
-from django.contrib import messages
-from django.core.mail import send_mail
+from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
+from django.contrib import messages
 
 from .models import Cliente
 
@@ -48,15 +48,25 @@ def actualizar(request):
         cliente.direccion = request.POST['direccion']
 
 def mensajes(request):
+    msg = ""
     if request.method == "POST":
         subject = request.POST['asunto']
-        mensajes = request.POST['mensajes']
+        mensaje = request.POST['mensaje']
         email = request.POST['email']
         recipient_list=[]
         recipient_list.append(email)
         email_from = settings.EMAIL_HOST_USER
 
-        send_mail(subject, mensajes, email_from, recipient_list)
-        return HttpResponse("Email recibido, gracias!")
+        #send_mail(subject, mensajes, email_from, recipient_list)
+
+        try:
+            send_mail(subject, mensaje, email_from, ['test.fullstack.python@gmail.com'])
+            msg="Gracias por su mensaje"
+            messages.error(request, msg) 
+        except BadHeaderError:
+            msg_error="Dirección no encontrada"
+            messages.error(request, msg_error)
+
+        return render(request, "cliente/contacto.html")
 
     return render(request, "cliente/contacto.html")
