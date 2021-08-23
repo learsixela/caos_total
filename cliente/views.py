@@ -50,14 +50,13 @@ def actualizar(request):
 def mensajes(request):
     if request.method == "POST":
         subject = request.POST['asunto']
-        mensajes = request.POST['mensajes']
+        mensajes = request.POST['mensaje']
         email = request.POST['email']
         recipient_list=[]
         recipient_list.append(email)
         email_from = settings.EMAIL_HOST_USER
 
         send_mail(subject, mensajes, email_from, recipient_list)
-
 
         return HttpResponse("Email recibido, gracias!")
 
