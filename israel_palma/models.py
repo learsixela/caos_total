@@ -12,7 +12,8 @@ class ServicioManager(models.Manager):
             errores['tiempo'] = 'Ingrese el tiempo'
         if len(data['costo']) == 0:
             errores['costo'] = 'Ingrese el costo del servicio'
-
+        return errores
+        
 class Servicio(models.Model):
     
     servicio = models.CharField(max_length=50)
