@@ -1,4 +1,7 @@
 from django.shortcuts import render, HttpResponse,redirect
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 
 from .models import Cliente
 
@@ -43,4 +46,20 @@ def actualizar(request):
         cliente.email = request.POST['email']
         cliente.password = request.POST['password']
         cliente.direccion = request.POST['direccion']
+
+def mensajes(request):
+    if request.method == "POST":
+        subject = request.POST['asunto']
+        mensajes = request.POST['mensajes']
+        email = request.POST['email']
+        recipient_list=[]
+        recipient_list.append(email)
+        email_from = settings.EMAIL_HOST_USER
+
+        send_mail(subject, mensajes, email_from, recipient_list)
+
+
+        return HttpResponse("Email recibido, gracias!")
+
+    return render(request, "cliente/contacto.html")
 

@@ -21,23 +21,25 @@ def create(request):
 
 def read(request):
     return HttpResponse("read")
+def getServicio(request):
+    servicio = Servicio.objects.get(id=request.POST['id'])
+    context = {
+        "servicio": servicio
+    }
+    return render(request,'israel_palma/edit.html', context)
 
 def update(request):
-    servicio = get_object_or_404(Servicio, pk=request.POST['id'])
+    servicio = Servicio.objects.get(id=request.POST['id'])
 
     errores= Servicio.objects.validaciones(request.POST)
+    
     if len(errores) == 0:
         servicio.servicio = request.POST['servicio']
         servicio.descripcion = request.POST['descripcion']
         servicio.tiempo = request.POST['tiempo']
         servicio.costo = request.POST['costo']
         servicio.save()
-
-    #servicio = Servicio.objects.get(id=request.POST['id'])
-    context = {
-        "servicio": servicio,
-    }
-    return render(request,'israel_palma/edit.html', context)
+    
     return redirect('/ipalma/')
 
 def delete(request):

@@ -50,9 +50,9 @@
                     <td>{{ser.servicio}}</td>
                     <td>{{ser.descripcion}}</td>
                     <td>{{ser.tiempo}}</td>
-                    <td>{{ser.costo}}</td>
-                    <td colspan="2">
-                        <form action="update" method="POST">
+                    <td>${{ser.costo}}.-</td>
+                    <td>
+                        <form action="getServicio" method="POST">
                             {% csrf_token %}
                             <input type="hidden" name="id" value="{{ser.id}}">
                             <button type="submit" class="btn btn-sm btn-outline-warning">Editar</button>
