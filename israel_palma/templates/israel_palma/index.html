@@ -2,6 +2,12 @@
 {% block form %}
     {% include 'israel_palma/navbar.html' %}
     <div class="container">
+        <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#nuevoServicio" aria-expanded="false" aria-controls="nuevoServicio">
+                Nuevo Servicio
+            </button>
+        </p>
+    <div class="collapse" id="nuevoServicio">
         <form class="text-center my-5" method="POST" action="create">
         {% csrf_token %}
             <div class="mb-3">
@@ -24,7 +30,7 @@
                 <input type="submit" class="btn btn-success" value="Enviar datos">
             </div>
         </form>
-
+    </div>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -34,17 +40,23 @@
                     <th scope="col">tiempo</th>
                     <th scope="col">costo</th>
                     <th scope="col">acción</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 {% for ser in servicios %}
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">{{ser.id}}</th>
                     <td>{{ser.servicio}}</td>
                     <td>{{ser.descripcion}}</td>
                     <td>{{ser.tiempo}}</td>
                     <td>{{ser.costo}}</td>
-                    <td>
+                    <td colspan="2">
+                        <form action="update" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{ser.id}}">
+                            <button type="submit" class="btn btn-sm btn-outline-warning">Editar</button>
+                        </form>
                         <form action="delete" method="POST">
                             {% csrf_token %}
                             <input type="hidden" name="id" value="{{ser.id}}">

@@ -6,7 +6,8 @@ urlpatterns = [
     # acceso por defecto
     path('', views.inicio),
     path('create', views.create),
+    path('update', views.update, name='update'),
+    #path('update/<int:pk>/', views.update, name='update_id'),
     path('read', views.read),
-    path('update', views.update),
     path('delete', views.delete),
 ]
