@@ -20,3 +20,4 @@ var/
 *.egg
 
 .cache
+settings.py
