@@ -21,3 +21,4 @@ var/
 
 .cache
 settings.py
+proyecto_test/settings.py
