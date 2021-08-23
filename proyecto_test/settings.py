@@ -154,5 +154,9 @@ EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER ="test.fullstack.python@gmail.com"
+<<<<<<< HEAD
 EMAIL_HOST_PASSWORD ="123momiaes"
+=======
+EMAIL_HOST_PASSWORD = "123momiaes"
+>>>>>>> 93bf668ae5f7f0a012bbc6a7f523718762fbaeba
 
