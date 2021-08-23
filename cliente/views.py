@@ -57,9 +57,6 @@ def mensajes(request):
         email_from = settings.EMAIL_HOST_USER
 
         send_mail(subject, mensajes, email_from, recipient_list)
-
-
         return HttpResponse("Email recibido, gracias!")
 
     return render(request, "cliente/contacto.html")
-

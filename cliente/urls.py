@@ -10,5 +10,5 @@ urlpatterns = [
     path('agregar', views.agregar),# create
     path('leer', views.leer),
     path('actualizar', views.actualizar),
-    path('mensajes', views.mensajes, name ='mensajes'),
+    path('mensajes', views.mensajes, name ='mensajes')
 ]
