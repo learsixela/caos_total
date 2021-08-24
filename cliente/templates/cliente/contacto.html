@@ -30,14 +30,17 @@
 
 <!-- message if email is sent -->
 {% if messages %}
-{% for message in messages %}
-    <div class="my-5 alert alert-success">
-    <h5 class="m-0">
-        {{ message }}
-    </h5>
-    </div>
-{% endfor %}
+    {% for message in messages %}
+        {% if message.tags == 'success' %}
+            <div class="my-5 alert alert-success">
+        {% else %}
+            <div class="my-5 alert alert-danger">
+        {% endif %}
+                <h5 class="m-0">
+                    {{ message }}
+                </h5>
+            </div>
+    {% endfor %}
 {% endif %}
-
 </body>
 </html>
