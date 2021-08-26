@@ -1,0 +1,49 @@
+<html>
+<head>
+    <style>
+        table { -pdf-keep-with-next: true; }
+        p { margin: 0; -pdf-keep-with-next: true; }
+        p.separator { -pdf-keep-with-next: false; font-size: 6pt; }
+        @page {
+            size: letter portrait;
+            @frame content_frame {
+                left: 15pt;
+                right: 15pt;
+                width: 580pt;
+                top: 25pt;
+                height: 750pt;
+                -pdf-frame-border: 1;    /* for debugging the layout */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <p>Reporte: {{titulo}}</p>
+    <br>
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>servicio</th>
+            <th>descripción</th>
+            <th>tiempo</th>
+            <th>costo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ser in servicios %}
+        <tr>
+            <td>{{ser.id}}</td>
+            <td>{{ser.servicio}}</td>
+            <td>{{ser.descripcion}}</td>
+            <td>{{ser.tiempo}}</td>
+            <td>$ {{ser.costo}}.-</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+        
+</body>
+</html>

@@ -1,13 +1,14 @@
 from django.shortcuts import render, HttpResponse,redirect
+#email
 from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
 from django.contrib import messages
+from django.core.mail import EmailMessage
 
 from .models import Cliente
 
 def inicio(request):
-    #return HttpResponse("this is the equivalent of @app.route('/')!")
-    #return render(request, "cliente/index.html")
+    request.session['email'] = []
     return render(request,'cliente/index.html')
 
 def agregar(request):
@@ -22,6 +23,7 @@ def agregar(request):
     password = request.POST['password'],
     direccion = request.POST['direccion']
     )
+
     return render(request, "cliente/index.html")
 
 def leer(request):
@@ -61,9 +63,14 @@ def mensajes(request):
         #send_mail(subject, mensajes, email_from, recipient_list)
 
         try:
-            send_mail(subject, mensaje, email_from, ['test.fullstack.python@gmail.com'])
+            #send_mail(subject, mensajes, email_from, recipient_list)
+            send_mail(subject, mensaje, email_from, ['sephitor@gmail.com'])
             msg="Gracias por su mensaje"
-            messages.error(request, msg) 
+            messages.success(request, msg)
+
+            #creando variable 'email' de session 
+            request.session['email'] = request.POST['email']
+
         except BadHeaderError:
             msg_error="Dirección no encontrada"
             messages.error(request, msg_error)
