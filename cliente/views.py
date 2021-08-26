@@ -50,6 +50,7 @@ def actualizar(request):
 def mensajes(request):
     msg = ""
     if request.method == "POST":
+
         subject = request.POST['asunto']
         mensaje = request.POST['mensaje']
         email = request.POST['email']
@@ -69,4 +70,23 @@ def mensajes(request):
 
         return render(request, "cliente/contacto.html")
 
+    print()
+    #si no existe la variable 'email' en session, le asigna a@a.cl por defecto
+    email = request.session.get('email')
+    print(email)
+    #si no existe error, keyerror
+    #email = request.session['email']
+    #print(email)
+    if request.session.get('email', True):
+        request.session['email'] = True
+        print(request.session['email'])
+
     return render(request, "cliente/contacto.html")
+
+"""
+DEBUG
+INFO 
+SUCCESS 
+WARNING 
+ERROR
+"""
