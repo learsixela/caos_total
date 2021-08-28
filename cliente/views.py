@@ -60,8 +60,8 @@ def mensajes(request):
         #send_mail(subject, mensajes, email_from, recipient_list)
 
         try:
-            send_mail(subject, mensaje, email_from, ['test.fullstack.python@gmail.com'])
-            msg="Gracias por su mensaje"
+            send_mail(subject, mensaje, email_from, [email])
+            msg="Gracias"
             messages.error(request, msg) 
         except BadHeaderError:
             msg_error="Dirección no encontrada"
