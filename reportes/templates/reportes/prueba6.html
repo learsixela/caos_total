@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style type="text/css">
+        @page {        
+            size: A4 landscape;
+            margin: 2cm;
+            @frame footer_frame {           /* Static frame */
+                -pdf-frame-content: footer_content;
+                left: 50pt; width: 712pt; top: 550pt; height: 20pt;
+                -pdf-frame-border: 1;    /* for debugging the layout */
+            }
+        }    
+        
+    </style>
+</head>
+<body>
+
+
+    <div id="footer_content">(c) - page <pdf:pagenumber>
+        of <pdf:pagecount>
+    </div>
+
+
+    <h1>Codigos de Barra</h1>
+    <pdf:barcode value="HOLA ESTO ES UN CODIGO DE BARRA" type="code128" humanreadable="1" align="right" />
+
+
+
+    <pdf:nextpage>
+    <h1>Salto de Pagina</h1>
+    <pdf:nextframe>
+
+    <h1>Espacios</h1>
+    <pdf:spacer height="400px">
+    <p>TEST</p>
+
+    <pdf:nextpage>
+    <h1>Tabla de Contenidos</h1>
+    <pdf:toc>
+
+</body>
+</html>
