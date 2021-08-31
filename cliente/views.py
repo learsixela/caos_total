@@ -52,6 +52,7 @@ def actualizar(request):
 def mensajes(request):
     msg = ""
     if request.method == "POST":
+
         subject = request.POST['asunto']
         mensaje = request.POST['mensaje']
         email = request.POST['email']
@@ -78,20 +79,21 @@ def mensajes(request):
 
     print()
     #si no existe la variable 'email' en session, le asigna a@a.cl por defecto
-    email = request.session.get('email','a@a.cl')
+    email = request.session.get('email')
     print(email)
     #si no existe error, keyerror
-    email = request.session['email']
-    print(email)
-    if request.session.get('email', False):
+    #email = request.session['email']
+    #print(email)
+    if request.session.get('email', True):
         request.session['email'] = True
-    print(request.session['email'])
+        print(request.session['email'])
 
     return render(request, "cliente/contacto.html")
 
-def send_email(request):
-    correo = EmailMessage('Mensaje de envio','aca el mensaje de salida.', to=['test.fullstack.python@gmail.com'])
-    correo.send()
-    msg="Gracias por su mensaje"
-    messages.error(request, msg)
-    return render(request, "cliente/contacto.html")
+"""
+DEBUG
+INFO 
+SUCCESS 
+WARNING 
+ERROR
+"""
