@@ -63,6 +63,11 @@ def mensajes(request):
         #send_mail(subject, mensajes, email_from, recipient_list)
 
         try:
+<<<<<<< HEAD
+            send_mail(subject, mensaje, email_from, [email])
+            msg="Gracias"
+            messages.error(request, msg) 
+=======
             #send_mail(subject, mensajes, email_from, recipient_list)
             send_mail(subject, mensaje, email_from, ['sephitor@gmail.com'])
             msg="Gracias por su mensaje"
@@ -71,6 +76,7 @@ def mensajes(request):
             #creando variable 'email' de session 
             request.session['email'] = request.POST['email']
 
+>>>>>>> 4e69cec0482b756652ff454f654804bd46487b26
         except BadHeaderError:
             msg_error="Dirección no encontrada"
             messages.error(request, msg_error)

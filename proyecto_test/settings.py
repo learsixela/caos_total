@@ -74,7 +74,11 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             'constanza_vega/templates',
+<<<<<<< HEAD
+            'roberto_carmona/templates',
+=======
             'Max_Sanchez/templates',
+>>>>>>> f82d9be2e4fcf690057045c9c34e456415a5da00
             'david_mix/templates',
             'juan_silva/templates',
             'ariel_gonzalez/templates',
@@ -101,10 +105,15 @@ WSGI_APPLICATION = 'proyecto_test.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'lead_gen_business',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation
@@ -150,7 +159,10 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< HEAD
+=======
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+>>>>>>> 4e69cec0482b756652ff454f654804bd46487b26
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_PORT = 587
