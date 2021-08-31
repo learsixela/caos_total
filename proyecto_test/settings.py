@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'karina_aliste',
     'Alex_urtubia',
     'alvaro_castillo',
     'david_mix',
@@ -39,12 +40,13 @@ INSTALLED_APPS = [
     'cliente',
     'Erik_Salas', 
     'jorgerojas',
-    'constanza_vega',
+    #'constanza_vega',
     'jose_ulloa',
     'andrea_fernandez',
     'ariel_gonzalez',
     'django.contrib.admin',
     'israel_palma',
+    'reportes',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -72,11 +74,16 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             'constanza_vega/templates',
+<<<<<<< HEAD
             'roberto_carmona/templates',
+=======
+            'Max_Sanchez/templates',
+>>>>>>> f82d9be2e4fcf690057045c9c34e456415a5da00
             'david_mix/templates',
             'juan_silva/templates',
             'ariel_gonzalez/templates',
             'jose_ulloa/templates',
+            'jorgerojas/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -131,9 +138,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 
@@ -151,3 +158,17 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+<<<<<<< HEAD
+=======
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+>>>>>>> 4e69cec0482b756652ff454f654804bd46487b26
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'test.fullstack.python@gmail.com'
+SERVER_EMAIL = 'test.fullstack.python@gmail.com'
+EMAIL_HOST_USER ="test.fullstack.python@gmail.com"
+EMAIL_HOST_PASSWORD = "123momiaes"
+

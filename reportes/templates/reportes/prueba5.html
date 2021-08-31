@@ -1,0 +1,71 @@
+<html>
+<head>
+    <style type="text/css">
+        @page {        
+            size: A4 landscape;
+            margin: 0cm;
+            color: red;
+            @frame texto {            
+                left: 150px;
+                width: 900px;
+                top: 280px;
+                height: 900pt;     
+                -pdf-frame-border: 1;    /* for debugging the layout */                   
+            }
+        }    
+        @page front_template{        
+            size: A4 landscape;
+            margin: 0cm;
+            color: green;
+            @frame texto {            
+                left: 150px;
+                width: 900px;
+                top: 280px;
+                height: 900pt;       
+                -pdf-frame-border: 3;    /* for debugging the layout */                 
+            }
+        }    
+    
+        @page back_template {
+            size: A4 landscape;                
+            color: blue;
+            @frame fundo {            
+                left: 520px;
+                width: 90px;
+                top: 730px;
+                height: 900pt;        
+                -pdf-frame-border: 5;    /* for debugging the layout */                
+            }
+        }
+        p { font-family: STSong-Light }
+    </style>
+</head>
+<body>
+   <!-- Content for Static Frame 'header_frame' -->    
+    <h1>HOLA</h1>
+    
+    <div id="texto" style="text-align:justify" >
+        <p style="font-size: 18pt;">{{usuario}}</p>
+    </div>
+
+    <pdf:nexttemplate name="front_template" />    
+    <pdf:nextpage>
+
+    <div id="texto" style="text-align:justify" >
+        <p style="font-size: 18pt;">{{usuario}}</p>
+    </div>
+
+    <pdf:nexttemplate name="back_template" />        
+    <pdf:nextpage>
+    
+    <div id="fundo">
+        <p style="font-size: 18pt;">CERT0932</p>
+    </div>
+    
+    
+    <pdf:nexttemplate name="front_template" />   
+    <pdf:nextpage>
+    <pdf:barcode value="1234567890" type="code128" humanreadable="1" align="right" />
+
+</body>
+</html>

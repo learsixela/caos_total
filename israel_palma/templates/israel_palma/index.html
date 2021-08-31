@@ -1,0 +1,71 @@
+{% extends 'israel_palma/base.html' %}
+{% block form %}
+    {% include 'israel_palma/navbar.html' %}
+    <div class="container">
+        <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#nuevoServicio" aria-expanded="false" aria-controls="nuevoServicio">
+                Nuevo Servicio
+            </button>
+        </p>
+    <div class="collapse" id="nuevoServicio">
+        <form class="text-center my-5" method="POST" action="create">
+        {% csrf_token %}
+            <div class="mb-3">
+                <label for="servicio" class="form-label">Servicio:</label>
+                <input type="text" class="form-control" id="servicio" name="servicio" placeholder="Ingrese Servicio">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción:</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese Descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="tiempo" class="form-label">Tiempo:</label>
+                <input type="text" class="form-control" id="tiempo" name="tiempo" placeholder="Ingrese tiempo">
+            </div>
+            <div class="mb-3">
+                <label for="costo" class="form-label">Costo:</label>
+                <input type="text" class="form-control" id="costo" name="costo" placeholder="Ingrese Costo">
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-success" value="Enviar datos">
+            </div>
+        </form>
+    </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">servicio</th>
+                    <th scope="col">descripcion</th>
+                    <th scope="col">tiempo</th>
+                    <th scope="col">costo</th>
+                    <th scope="col">acción</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ser in servicios %}
+                <tr>
+                    <th scope="row">{{ser.id}}</th>
+                    <td>{{ser.servicio}}</td>
+                    <td>{{ser.descripcion}}</td>
+                    <td>{{ser.tiempo}}</td>
+                    <td>${{ser.costo}}.-</td>
+                    <td>
+                        <form action="getServicio" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{ser.id}}">
+                            <button type="submit" class="btn btn-sm btn-outline-warning">Editar</button>
+                        </form>
+                        <form action="delete" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{ser.id}}">
+                            <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+    <div>
+{% endblock form %}

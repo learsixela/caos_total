@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                    <h2>Adminitrador <b>Productos</b></h2>
+                    </div>
+                    <div class="col-sm6">
+                        <a href="#dddproducto" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>Agregar Producto Nuevo</a>
+                        <a href="#dddproducto" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i>Eliminar</a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" name="" id="selectAll">
+                                <label for="selectAll"></label>
+                            </span>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>Acciones</th>
+                        </th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox1" name="option[]" value="1">
+                                <label for="checkbox1"></label>
+                            </span>
+                        </td>
+                        <td>Na ny</td>
+                        <td>shshskdjidh@udhudh.com</td>
+                        <td>98dbdydt6dydbhu</td>
+                        <td>1659494588</td>
+                        <td>
+                            <a href="#dddproducto" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                            <a href="#dddproducto" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
+                        </td>                       
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox1" name="option[]" value="1">
+                                <label for="checkbox1"></label>
+                            </span>
+                        </td>
+                        <td>Na ny</td>
+                        <td>shshskdjidh@udhudh.com</td>
+                        <td>98dbdydt6dydbhu</td>
+                        <td>1659494588</td>
+                        <td>
+                            <a href="#dddproducto" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                            <a href="#dddproducto" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
+                        </td>                       
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox1" name="option[]" value="1">
+                                <label for="checkbox1"></label>
+                            </span>
+                        </td>
+                        <td>Na ny</td>
+                        <td>shshskdjidh@udhudh.com</td>
+                        <td>98dbdydt6dydbhu</td>
+                        <td>1659494588</td>
+                        <td>
+                            <a href="#dddproducto" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                            <a href="#dddproducto" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
+                        </td>                       
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox1" name="option[]" value="1">
+                                <label for="checkbox1"></label>
+                            </span>
+                        </td>
+                        <td>Na ny</td>
+                        <td>shshskdjidh@udhudh.com</td>
+                        <td>98dbdydt6dydbhu</td>
+                        <td>1659494588</td>
+                        <td>
+                            <a href="#dddproducto" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                            <a href="#dddproducto" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
+                        </td>                       
+                    </tr>
+                </tbody>
+            </table>           
+        </div>   
+    </div>
+
+</body>
+
+</html>

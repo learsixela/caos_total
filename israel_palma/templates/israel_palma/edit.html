@@ -1,0 +1,30 @@
+{% extends 'israel_palma/base.html' %}
+{% block form %}
+    {% include 'israel_palma/navbar.html' %}
+    <div class="container">
+        <form class="text-center my-5" method="POST" action="update">
+        {% csrf_token %}
+            <input type="hidden" name="id" value="{{servicio.id}}">
+            <div class="mb-3">
+                <label for="servicio" class="form-label">Servicio:</label>
+                <input type="text" class="form-control" id="servicio" value="{{ servicio.servicio }}" name="servicio" placeholder="Ingrese Servicio">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción:</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{ servicio.descripcion }}" placeholder="Ingrese Descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="tiempo" class="form-label">Tiempo:</label>
+                <input type="text" class="form-control" id="tiempo" name="tiempo" value="{{ servicio.tiempo }}" placeholder="Ingrese tiempo">
+            </div>
+            <div class="mb-3">
+                <label for="costo" class="form-label">Costo:</label>
+                <input type="text" class="form-control" id="costo" name="costo" value="{{ servicio.costo }}" placeholder="Ingrese Costo">
+            </div>
+            <div class="mb-3">
+                <a class="btn btn-primary" href="/ipalma/" role="button">volver</a>
+                <input type="submit" class="btn btn-success" value="Actualizar datos">
+            </div>
+        </form>
+    </div>
+{% endblock %}

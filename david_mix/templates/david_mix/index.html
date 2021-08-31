@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Bodega de David</title>
+</head>
+<body>
+    <h1>Index Cliente ::</h1>
+    <form method="POST" action="register">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <br>
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" name="descripcion" placeholder="Descripción del producto">
+        <br>
+        <label for="precio">Precio:</label>
+        <input type="text" id="precio" name="precio" placeholder="Precio del producto">
+        <br>
+        <label for="peso">Peso (g):</label>
+        <input type="peso" id="peso" name="peso" placeholder="Peso en gramos">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

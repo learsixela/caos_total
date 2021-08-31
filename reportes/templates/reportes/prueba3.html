@@ -1,0 +1,45 @@
+<html>
+<head>
+    <style>
+        @page {
+            size: letter portrait;
+            @frame header_frame {           /* Static frame */
+                -pdf-frame-content: header_content;
+                left: 50pt; width: 512pt; top: 50pt; height: 40pt;
+                -pdf-frame-border: 1;    /* for debugging the layout */
+            }
+            @frame col1_frame {             /* Content frame 1 */
+                -pdf-frame-content: col1_content;
+                left: 44pt; width: 245pt; top: 90pt; height: 632pt;
+                -pdf-frame-border: 1;    /* for debugging the layout */
+            }
+            @frame col2_frame {             /* Content frame 2 */
+                -pdf-frame-content: col2_content;
+                left: 323pt; width: 245pt; top: 90pt; height: 632pt;
+                -pdf-frame-border: 1;    /* for debugging the layout */
+            }
+            @frame footer_frame {           /* Static frame */
+                -pdf-frame-content: footer_content;
+                left: 50pt; width: 512pt; top: 772pt; height: 20pt;
+                -pdf-frame-border: 1;    /* for debugging the layout */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header_content">Lyrics-R-Us</div>
+    <div id="footer_content">(c) - page <pdf:pagenumber>
+        of <pdf:pagecount>
+    </div>
+    <div id="col1_content">
+        <p>Old MacDonald had a farm. EIEIO.</p>
+        <p>And on that farm he had a cow. EIEIO.</p>
+    </div>
+    <div  id="col2_content">
+        <p>With a moo-moo here, and a moo-moo there.</p>
+        <p>Here a moo, there a moo, everywhere a moo-moo.</p>
+    </div>
+
+</body>
+</html>

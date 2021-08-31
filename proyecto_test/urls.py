@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import include,path
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('cliente.urls')), # ruta por defecto
     path('cliente/', include('cliente.urls')),
+    path('karina_aliste/', include('karina_aliste.urls')),
+    path('dmix/', include('david_mix.urls')),
     path('alex_urtubia/', include('Alex_urtubia.urls')),
     path('jorgerojas/', include('jorgerojas.urls')),
     path('ccuevas/', include('cristiancuevas.urls')),  
@@ -33,6 +35,6 @@ urlpatterns = [
     path('rcarmona/', include('roberto_carmona.urls')),
     path('ipalma/', include('israel_palma.urls')),
     path('srojas/', include('sebastian_rojas.urls')),
+    path('reportes/', include('reportes.urls')),
 ]
-
 
