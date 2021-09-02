@@ -1,0 +1,17 @@
+
+h1{
+    color: rgb(23, 18, 99);
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+.img-fluid{
+    max-width: 15%;
+}
+
+.col{
+    background-color: lightgray;
+}
