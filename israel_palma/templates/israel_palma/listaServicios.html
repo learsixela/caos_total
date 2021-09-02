@@ -1,0 +1,43 @@
+{% extends 'israel_palma/base.html' %}
+{% block form %}
+    {% include 'israel_palma/navbar.html' %}
+    <div class="container">
+        <h2>{{titulo}}</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">servicio</th>
+                    <th scope="col">descripción</th>
+                    <th scope="col">tiempo</th>
+                    <th scope="col">costo</th>
+                    <th scope="col">acción</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ser in object_list %}
+                <tr>
+                    <th scope="row">{{ser.id}}</th>
+                    <td>{{ser.servicio}}</td>
+                    <td>{{ser.descripcion}}</td>
+                    <td>{{ser.tiempo}}</td>
+                    <td>${{ser.costo}}.-</td>
+                    <td>
+                        <form action="getServicio" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{ser.id}}">
+                            <button type="submit" class="btn btn-sm btn-outline-warning">Editar</button>
+                        </form>
+                        <form action="delete" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{ser.id}}">
+                            <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <div>
+{% endblock form %}
