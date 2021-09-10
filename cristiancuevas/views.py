@@ -27,6 +27,15 @@ def crear(request):
     }
     return render(request, "cristiancuevas/creado.html", context)
 
+
+def mostrar(request):
+    datos_jugador = Jugador.objects.all() # Select * from Jugador
+    context = {
+        "botitas": datos_jugador, # context clave y resultado. key-palabra, es un diccionario
+    }
+    return render(request,'cristiancuevas/players.html', context)
+
+
 def actualizar(request):
     return HttpResponse("actualizar")
 

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Jugador Creado</h1>
+        <h1>Jugadores Creados</h1>
         <table class="table">
             <thead>
                 <tr>
@@ -20,21 +20,15 @@
                 </tr>
             </thead>
             <tbody>
+                {% for pelota in botitas %}
                 <tr>
-                    <td>{{perro}}</td>
-                    <td>{{gato}}</td>
-                    <td>{{hamster}}</td>
+                    <th scope="row">{{pelota.player_name}}</th>
+                    <td>{{pelota.player_number}}</td>
+                    <td>{{pelota.player_team}}</td>
                 </tr>
-                <tr>
+                {% endfor %}
             </tbody>
         </table>
-        <div>
-            <form action="mostrar" method="POST">
-                {% csrf_token %}
-                <input type="hidden" name="id" value="{{botitas.id}}">
-                <button type="submit" class="btn btn-sm btn-success">Mostrar Jugadores</button>
-            </form>
-        </div>
     </div>
 </body>
 </html>
