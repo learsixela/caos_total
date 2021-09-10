@@ -7,10 +7,10 @@ from django.views.generic import ListView, View
 
 # Create your views here.
 def inicio(request):
-    servicios = Servicio.objects.all()
+    servicios = Servicio.objects.all() # Select * from servicios
     context = {
-        "servicio": "",
-        "servicios":servicios,
+        "servicio": "", # era prueba, ignorar
+        "servicios":servicios, # context clave y resultado. key-palabra, es un diccionario
     }
     return render(request,'israel_palma/index.html', context)
 
@@ -30,7 +30,7 @@ def read(request):
 
 
 def getServicio(request):
-    servicio = Servicio.objects.get(id=request.POST['id'])
+    servicio = Servicio.objects.get(id=request.POST['id']) # el id viene del name index.html linea 57
     context = {
         "servicio": servicio
     }

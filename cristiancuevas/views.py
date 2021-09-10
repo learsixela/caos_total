@@ -11,11 +11,21 @@ def crear(request):
     # request.post['parametro']
     # capturando los parametros enviados por el formulario
     Jugador.objects.create(
-    player_name = request.POST['player_name'],
+    player_name = request.POST['player_name'], # se captura lo que va en el name
     player_number = request.POST['player_number'],
     player_team = request.POST['player_team']
     )
-    return render(request, "cristiancuevas/crear.html")
+
+    # Vamos a pasar info
+    jugador = request.POST['player_name']
+    numero = request.POST['player_number']
+    equipo = request.POST['player_team']
+    context = {
+        'perro': jugador,
+        'gato': numero,
+        'hamster': equipo,
+    }
+    return render(request, "cristiancuevas/creado.html", context)
 
 def actualizar(request):
     return HttpResponse("actualizar")

@@ -7,7 +7,7 @@
                 Nuevo Servicio
             </button>
         </p>
-    <div class="collapse" id="nuevoServicio">
+    <div class="acollapse" id="nuevoServicio">
         <form class="text-center my-5" method="POST" action="create">
         {% csrf_token %}
             <div class="mb-3">
@@ -44,7 +44,7 @@
                 </tr>
             </thead>
             <tbody>
-                {% for ser in servicios %}
+                {% for ser in servicios %} {% comment %} de la linea 13 del view {% endcomment %}
                 <tr>
                     <th scope="row">{{ser.id}}</th>
                     <td>{{ser.servicio}}</td>
@@ -54,7 +54,7 @@
                     <td>
                         <form action="getServicio" method="POST">
                             {% csrf_token %}
-                            <input type="hidden" name="id" value="{{ser.id}}">
+                            <input type="hidden" name="id" value="{{ser.id}}"> {% comment %} name el nombre, se necesita porque cuando se aprete editar va al view linea 33 {% endcomment %}
                             <button type="submit" class="btn btn-sm btn-outline-warning">Editar</button>
                         </form>
                         <form action="delete" method="POST">
@@ -66,6 +66,6 @@
                 </tr>
                 {% endfor %}
             </tbody>
-            </table>
+        </table>
     <div>
 {% endblock form %}
